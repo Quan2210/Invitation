@@ -1,0 +1,205 @@
+body {
+    background: linear-gradient(135deg, #ffd6e8, #fce4ec);
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === Thiệp === */
+.card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+    animation: float 3s ease-in-out infinite;
+}
+
+.card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.card.open .card-inner {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.front {
+    background: linear-gradient(145deg, #f48fb1, #f06292);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.front .card-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.7;
+}
+
+.front-text {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* === Mặt trong === */
+.back {
+    background: white;
+    color: #444;
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid #f48fb1;
+    position: relative;
+    overflow: hidden;
+}
+
+.back h2 {
+    color: #ec407a;
+    margin-bottom: 10px;
+}
+
+.hearts {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #ec407a;
+}
+
+.signature {
+    margin-top: 20px;
+    font-style: italic;
+    color: #888;
+}
+
+/* === Ảnh bên trong có hiệu ứng === */
+.inside-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.card.open .inside-image {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Hiệu ứng text bên trong fade-in */
+.message {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 1s ease;
+}
+
+.card.open .message {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* === Hoa rơi === */
+.flower {
+    position: fixed;
+    top: -50px;
+    width: 25px;
+    height: 25px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
+    background-size: cover;
+    pointer-events: none;
+    opacity: 0.9;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* === Bóng bay === */
+.balloon {
+    position: fixed;
+    bottom: -80px;
+    width: 40px;
+    height: 55px;
+    background-color: red;
+    border-radius: 50% 50% 45% 45%;
+    opacity: 0.9;
+    animation: flyUp 6s linear forwards;
+    box-shadow: inset -3px -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.balloon::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: #555;
+    transform: translateX(-50%);
+}
+
+@keyframes flyUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.1);
+        opacity: 0;
+    }
+}
