@@ -148,8 +148,8 @@ body {
 .flower {
     position: fixed;
     top: -50px;
-    width: 30px;
-    height: 60px;
+    width: 35px;
+    height: 70px;
     background-image: url('inside3.png');
     background-size: cover;
     pointer-events: none;
