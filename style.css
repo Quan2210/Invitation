@@ -6,13 +6,13 @@ body {
     display: flex;
     align-items: start;
     justify-content: center;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .card {
     position: relative;
-    width: 600px;
-    height: 400px;
+    width: 80%;
+    height: 30%;
     perspective: 100px;
     cursor: pointer;
     animation: float 3s ease-in-out infinite;
@@ -32,7 +32,7 @@ body {
 
 .front,
 .back {
-    margin-top: 50px;
+    margin-top: 10%;
     position: absolute;
     width: 100%;
     height: 100%;
