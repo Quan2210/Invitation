@@ -148,8 +148,8 @@ body {
 .flower {
     position: fixed;
     top: -50px;
-    width: 35px;
-    height: 70px;
+    width: 40px;
+    height: 80px;
     background-image: url('inside3.png');
     background-size: cover;
     pointer-events: none;
@@ -160,13 +160,13 @@ body {
 .flower2 {
     position: fixed;
     top: -50px;
-    width: 40px;
-    height: 60px;
+    width: 50px;
+    height: 80px;
     background-image: url('inside4.png');
     background-size: cover;
     pointer-events: none;
     opacity: 0.9;
-    animation: fall linear forwards;
+    animation: fall2 linear forwards;
 }
 
 @keyframes fall {
@@ -178,6 +178,18 @@ body {
     100% {
         transform: translateY(110vh) rotate(360deg);
         opacity: 0;
+    }
+}
+
+@keyframes fall2 {
+    100% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    0% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 1;
     }
 }
 

@@ -25,7 +25,7 @@ function createFlower() {
     flower.style.animationDuration = (5 + Math.random() * 5) + 's';
     flower.style.transform = `rotate(${Math.random() * 360}deg)`;
     document.body.appendChild(flower);
-    setTimeout(() => flower.remove(), 10000);
+    setTimeout(() => flower.remove(), 7000);
 }
 function createFlower2() {
     const flower2 = document.createElement('div');
