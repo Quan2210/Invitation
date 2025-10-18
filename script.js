@@ -27,7 +27,17 @@ function createFlower() {
     document.body.appendChild(flower);
     setTimeout(() => flower.remove(), 10000);
 }
+function createFlower2() {
+    const flower2 = document.createElement('div');
+    flower2.classList.add('flower2');
+    flower2.style.left = Math.random() * window.innerWidth + 'px';
+    flower2.style.animationDuration = (5 + Math.random() * 5) + 's';
+    flower2.style.transform = `rotate(${Math.random() * 360}deg)`;
+    document.body.appendChild(flower2);
+    setTimeout(() => flower2.remove(), 10000);
+}
 setInterval(createFlower, 500);
+setInterval(createFlower2, 1000);
 
 // === Tạo bóng bay khi mở thiệp ===
 function createBalloons(count) {
