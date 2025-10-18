@@ -10,8 +10,8 @@ body {
 
 .card {
     position: relative;
-    width: 80%;
-    height: 40%;
+    width: 75%;
+    height: 25%;
     perspective: 100px;
     cursor: pointer;
     animation: float 3s ease-in-out infinite;
