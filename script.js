@@ -1,7 +1,9 @@
 const card = document.getElementById('inviteCard');
 const music = document.getElementById('bgMusic');
 
-music.play();
+setTimeout(() => {
+    music.play();
+}, 500);
 // Khi click thiệp -> mở thiệp & bật nhạc + tạo bóng bay
 card.addEventListener('click', () => {
     card.classList.toggle('open');
