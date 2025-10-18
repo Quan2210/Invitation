@@ -8,12 +8,11 @@ body {
     justify-content: center;
 }
 
-/* === Thiệp === */
 .card {
     position: relative;
-    width: 300px;
-    height: 200px;
-    perspective: 1000px;
+    width: 450px;
+    height: 300px;
+    perspective: 100px;
     cursor: pointer;
     animation: float 3s ease-in-out infinite;
 }
@@ -149,7 +148,7 @@ body {
     top: -50px;
     width: 25px;
     height: 25px;
-    background-image: url('https://cdn-icons-png.flaticon.com/512/616/616408.png');
+    background-image: url('inside.png');
     background-size: cover;
     pointer-events: none;
     opacity: 0.9;
