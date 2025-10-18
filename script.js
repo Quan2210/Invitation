@@ -3,7 +3,7 @@ const music = document.getElementById('bgMusic');
 
 setTimeout(() => {
     music.play();
-}, 500);
+}, 100);
 // Khi click thiệp -> mở thiệp & bật nhạc + tạo bóng bay
 card.addEventListener('click', () => {
     card.classList.toggle('open');
@@ -11,7 +11,7 @@ card.addEventListener('click', () => {
         // music.play().catch(() => {
         //     console.log('Không thể tự động phát nhạc (yêu cầu tương tác người dùng).');
         // });
-        createBalloons(10); // tạo 10 bóng bay
+        createBalloons(20); // tạo 10 bóng bay
     } else {
         // music.pause();
     }
@@ -27,7 +27,7 @@ function createFlower() {
     document.body.appendChild(flower);
     setTimeout(() => flower.remove(), 10000);
 }
-setInterval(createFlower, 600);
+setInterval(createFlower, 500);
 
 // === Tạo bóng bay khi mở thiệp ===
 function createBalloons(count) {
