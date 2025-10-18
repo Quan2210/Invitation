@@ -1,16 +1,17 @@
 const card = document.getElementById('inviteCard');
 const music = document.getElementById('bgMusic');
 
+music.play();
 // Khi click thiệp -> mở thiệp & bật nhạc + tạo bóng bay
 card.addEventListener('click', () => {
     card.classList.toggle('open');
     if (card.classList.contains('open')) {
-        music.play().catch(() => {
-            console.log('Không thể tự động phát nhạc (yêu cầu tương tác người dùng).');
-        });
+        // music.play().catch(() => {
+        //     console.log('Không thể tự động phát nhạc (yêu cầu tương tác người dùng).');
+        // });
         createBalloons(10); // tạo 10 bóng bay
     } else {
-        music.pause();
+        // music.pause();
     }
 });
 
