@@ -10,8 +10,8 @@ body {
 
 .card {
     position: relative;
-    width: 75%;
-    height: 25%;
+    width: 70%;
+    height: 35%;
     perspective: 100px;
     cursor: pointer;
     animation: float 3s ease-in-out infinite;
@@ -37,6 +37,8 @@ body {
     border-radius: 10px;
     backface-visibility: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
 }
 
 .front {
